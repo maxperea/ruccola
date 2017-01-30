@@ -10,4 +10,7 @@ Kitchen:
 * When done: 
   - Changes status to green.
   - Writes note of tablenr and ordernr.
+  
+Server:
+* Picks up order from kitchen and serve customers.  
 
