@@ -1,0 +1,13 @@
+Bar:
+* Place an order (write)
+* Change order details - while (write)
+* Check status of placed orders (read)
+* Make payment
+
+Kitchen:
+* Check order details (read)
+* Change status of orders (write)
+* When done: 
+  - Changes status to green.
+  - Writes note of tablenr and ordernr.
+
