@@ -1,16 +1,31 @@
 Bar:
-* Place an order (write)
+* Place an order (to kitchen) (write)
 * Change order details - while (write)
 * Check status of placed orders (read)
-* Make payment
+* Make payment (everything)
 
 Kitchen:
+* Queue based on time.
 * Check order details (read)
 * Change status of orders (write)
 * When done: 
   - Changes status to green.
   - Writes note of tablenr and ordernr.
-  
+  - Remove.
+
+Order cards:
+* Timestamp, ordernr, tablenr.  
+* Food spec.
+* Buttons to change status.
+  - Red -> "Pick up"
+  - Yellow -> "Done"
+  - Green -> "Remove"  
+* Colours:
+  - Red for new order 
+  - Yellow for picked up
+  - Green for done
+
+-------
 Server:
 * Picks up order from kitchen and serve customers.  
 
