@@ -1,0 +1,51 @@
+@import 'https://fonts.googleapis.com/css?family=Pacifico|Dosis';
+
+.startletter {
+  font-size:72pt;
+}
+#title {
+  font-family:tahoma;
+  font-size:32pt;
+  padding:0px;
+  color:#cccccc;
+  background-image:url("../bg3.jpg");
+  margin:0px;
+}
+
+#headertext {
+  padding-top:100px;
+  margin-top:0px;
+  margin-left:30px;
+  margin-bottom:0px;
+}
+
+
+body {
+  padding:20px;
+  font-family:arial;
+  color:#cccccc;
+  background:#262626;
+  margin:40px;
+}
+
+table  {
+  width:80%;
+  height:80%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:20px;
+  background:white;
+}
+
+section {
+  color:black;
+  background:#bbbbbb;
+  padding:20px;
+}
+
+#burgers {
+  overflow-x: scroll;
+}
+
+#drinks {
+}

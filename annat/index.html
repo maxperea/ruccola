@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tutorial 1</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script>
+      docLoaded(indexPageLoaded);
+    </script>
+    <script type="text/javascript" src="data/menu.js"></script>
+  </head>
+  <body>
+    <main>
+
+    <section id="title">
+
+      <h1 id="headertext"><a class="startletter">W</a>elcome to <a class="startletter">B</a>urgertown</h1>
+    <hr>
+
+    </section>
+
+
+    <section id="burgers">
+      <h2>Välj en burgare</h2>
+      <p>Välj burgaren kunden vill köpa här</p>
+      <table>
+        <tbody>
+          <tr id="burgertable">
+            <td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </section>
+
+    <section id="drinks">
+
+      <h2>Välj en dryck</h2>
+      <p>Välj drycken kunden vill köpa här</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+
+              <h3>Cola</h3>
+              <img src="http://www.coca-colaproductfacts.com/content/dam/productfacts/us/productDetails/ProductImages/Coke_12oz.png" height="200px">
+
+            </td>
+            <td>
+
+              <h3>Kaffe</h3>
+              <img src="http://cdn1.cdnme.se/1024491/7-3/kaffe_5310f9c62a6b229137585a63.jpg" height="200px">
+
+            </td>
+            <td>
+
+              <h3>Vodka</h3>
+              <img src="https://www.danmurphys.com.au/media/DM/Product/308x385/27720_0_9999_med_v1_m56577569854560587.png" height="200px">
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+              <p>
+              <label for="lask">Välj läsk</label><br>
+              <select id="lask" name="va">
+                <option>Cola</option>
+                <option>Sprite</option>
+                <option>Fanta</option>
+                <option>Julmust</option>
+              </select>
+              </p>
+
+            </td>
+            <td>
+              <input type="radio" name="kaffe" value="Svart kaffe" checked="checked">Svart</input>
+              <br>
+              <input type="radio" name="kaffe" value="Kaffe med socker" >Socker</input>
+              <br>
+              <input type="radio" name="kaffe" value="Kaffe med mjölk" >Mjölk</input>
+              <br>
+              <input type="radio" name="kaffe" value="Kaffe med mjölk och socker" >Mjölk och socker</input>
+            </td>
+            <td>
+
+              <ul>
+                <li>Massa alkohol</li>
+              </ul>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="submit" onclick="sendFunction()">Send</button>
+    </section>
+
+
+    </main>
+
+    <footer>
+      <hr>
+      &copy Max
+    </footer>
+  </body>
+</html>
+
