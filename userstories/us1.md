@@ -1,9 +1,3 @@
-Once upon a time user wanted to buy a burger.
-He went to a place called Värmlandskällaren where he was greeted by handsome young man.
- - Hello dear user! How are you feeling this evening?
- ...
-
-
 # User Stories
 
 ## Waiters
