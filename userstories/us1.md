@@ -2,12 +2,15 @@
 
 ## Waiters
 
- - As a waiter i want to get information so that i can deliver the food to the correct table.
+ - As a waiter I want to get information so that I can deliver the food to the correct table.
 
 ## Barmen
 
- - As a barman i want to quickly send the order information to the kitchen so that i don't have to waste time going there.
+ - As a barman I want to quickly send the order information to the kitchen so that I don't have to waste time going there.
 
 ## Chefs
 
- - As a chef 
+ - As a chef I want to see what food I should make so that I can make the correct food.
+ - As a chef I want to be able to report that I have started with a meal so that noone needs to come to me and ask.
+ - As a chef I want to see a larger selections of meals so that i can do similar meals at once.
+ - As a chef I want to report finished meals in an easy way so that i can spend more time cooking.
