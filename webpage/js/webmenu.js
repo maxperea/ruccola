@@ -48,3 +48,18 @@ var food = [
         "img": "http://ciaoitalia.se/wp-content/uploads/2015/02/Grekisk-sallad.jpg"
     }
 ];
+
+var drinks = [
+    {
+        "name": "Norrlands guld",
+        "price": 25
+    },
+    {
+        "name": "IPA",
+        "price": 37
+    },
+    {
+        "name": "Läsk",
+        "price": 20
+    }
+];
