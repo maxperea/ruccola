@@ -1,0 +1,28 @@
+
+
+table {
+    width: 100%;
+    height: 100%;
+    background-color: floralwhite;
+}
+
+#orders {
+    width: 80%;
+    /*color: rebeccapurple;*/
+    border: .3em dotted rosybrown;
+}
+
+#status {
+    width: 20%;
+    color: aqua;
+    border: .3em dotted rosybrown;
+}
+
+#food {
+    color: brown;
+}
+
+#drinks {
+    color:darkgoldenrod;
+    
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Värmlandskällaren</title>
+    <link rel="stylesheet" href="css/nationPub.css">
+  </head>
+
+  <body>		
+
+    <header>
+      <div class="innertube">
+        <img src="logo.png" alt="Wermland" height="100px" align="middle">
+      </div>
+    </header>
+    <hr>
+
+    <div id="wrapper">
+
+      <main>
+      <div id="content">
+        <div class="ordering">
+          <section>
+          <h1>{{ uiLabels.mains }}</h1>
+          <div v-for="menuitem in menu.foods">
+            <h2>
+              <label>
+                <input type="checkbox" v-model="mainDish" :value="menuitem.label" />
+                {{menuitem.label}}, {{menuitem.price}}:-
+              </label>
+            </h2>
+            <div>
+              Extra: 
+              <label v-for="detail in menuitem.details">
+                <input type="checkbox" v-model="extras" :value="menuitem.label + '::' + detail.extra" />
+                {{detail.extra}}, {{detail.price}}:-
+              </label>      
+            </div>
+          </div>
+          <h1>{{ uiLabels.sideorders }}</h1>
+          <label v-for="menuitem in menu.sideorders">
+            <input type="checkbox" name="item[]" :value="menuitem.label" />
+            {{menuitem.label}}, {{menuitem.price}}:-
+          </label>
+          <h1>{{ uiLabels.drinks }}</h1>
+          <label v-for="menuitem in menu.drinks">
+            <input type="checkbox" name="item[]" :value="menuitem.label" />
+            {{menuitem.label}}, {{menuitem.size}} cl, {{menuitem.price}}:-
+          </label>
+          <hr>
+          <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+          </section>
+
+          <aside>
+            <div class="ordering">
+              <h1>Köket</h1>
+              <h2>{{ uiLabels.ordersInProgress }}</h2>
+              <ol>
+                <li v-for="(item, key) in orders" v-if="!item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
+              </ol>
+              <h2>{{ uiLabels.ordersFinished }}</h2>
+              <ol>
+                <li v-for="(item, key) in orders" v-if="item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
+              </ol>
+            </div>
+          </aside>
+        </div>
+      </div>
+      </main>
+
+    </div>
+
+
+    <div class="footer">
+      <hr>
+      <p>&copy Ruccola 2017</p>
+    </div>  
+
+
+    <script src="/vue/vue.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/nationPub.js"></script>
+    <script src="js/diner.js"></script>
+  </body>
+</html>
