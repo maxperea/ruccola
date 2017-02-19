@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Dosis");
+
+/*
+@media screen and (aspect-ratio: 16/9){
+    body {
+        font-family: "Arial";
+        font-size: 14pt;
+    }
+}*/
+
+body {
+        font-family: "Arial";
+        font-size: 12pt;
+        background-color: antiquewhite;
+}
+
+/* Sections */
+    
+#header { 
+    height: 350px;
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 17pt;
+    margin: 1em 1em 1em 1em;    
+}
+
+#headerpic {
+    opacity: 0.3;
+    position: absolute;
+    height: 350px;
+    z-index: -1;
+    padding: 20px;
+    width: 95%;
+        
+}
+
+.sections {
+    color: black;
+    border: .3em dotted rosybrown;
+    border-left: .5em solid rosybrown;
+    padding: 20px;
+    padding-left: 40px;
+    margin: 1em 1em 1em 1em;
+    background-color: white;   
+}
+
+#food {
+}
+
+#drink {   
+}
+
+#order {
+}
+
+#submit {
+    background-color: white;
+    font-size: 15pt;
+    margin-bottom: 30px;
+}
+
+
+/* Attributes */
+input[type="radio"] {
+    height: auto;
+    width: auto;
+}
+
+input[type="submit"] {
+    height: 30pt;
+    width: 60pt;
+}
+
+button:hover {
+    color: rosybrown;
+    cursor: pointer;
+}
+/* .class #id */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

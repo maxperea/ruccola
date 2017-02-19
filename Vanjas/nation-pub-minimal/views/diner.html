@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script type="text/javascript" src="/data/menu.js"></script>
+        <script src="js/script.js"></script>
+        <script>docLoaded(indexPageLoaded);</script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Burger Pub</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <main id="main">
+                <img id="headerpic" src="http://johanoberg.se/wp-content/uploads/2014/02/pub-england.jpg">
+            <section id="header">
+                <span id="headline">
+                    <h1>Välkommen till Burger Pub!</h1>
+                    <h4>Här finns något för alla, ta en titt på vårt breda sortiment</h4><br>
+                </span>
+            </section>
+            
+            <section id="food" class="sections">
+               <h2>Maträtter:</h2> 
+                <table>
+                    <thead>
+                        <tr id="name"></tr>
+                    </thead>
+                    <tbody>
+                        <tr id="pic"></tr>
+                        <tr id="info"></tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section id="order" class="sections">
+                <h2>Här beställer du din mat:</h2>
+            </section>
+            
+            <section id="drink" class="sections">
+                <h2>Dryckesmeny:</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Öl</th>
+                            <th>Läsk</th>
+                            <th>Kaffe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://sp09cjasmin.files.wordpress.com/2011/01/soiree_l1.jpg" alt="drink" title="beer" width="300"></td>
+                            <td><img src="http://cakesandcandy.se/files/2015/06/coca-cola-läsk-glas-dryck.jpg" alt="drink" title="soda" width="250"></td>
+                            <td><img src="https://stegforhalsa.se/wp-content/uploads/2015/12/Drick-kaffe.jpg" alt="drink" title="kaffe" width="300"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <label for="beer">Välj öl:</label><br>
+                                        <select id="beer" name="beer">
+                                            <option selected="selected">---</option>
+                                            <option>Lager</option>
+                                            <option>IPA</option>                                               <option>APA</option>
+                                        </select>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <label for="soda">Välj läsk:</label><br>
+                                        <select id="soda" name="soda">
+                                            <option selected="selected">---</option>
+                                            <option>Coca cola</option>
+                                            <option>Fanta</option>
+                                            <option>Sprite</option>
+                                            <option>Mineralvatten</option>
+                                        </select>
+                                </p>
+                            </td>
+                            <td>
+                                <form action="">
+                                    <input type="radio" name="coffee" value="---" checked="checked">Inget kaffe
+                                    <input type="radio" name="coffee" value="Svart kaffe"> Svart kaffe
+                                    <input type="radio" name="coffee" value="Kaffe med mjölk">Kaffe med mjölk
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <button type="submit" id="submit" v-on:click="placeOrder()">--- Godkänn beställning ---</button>
+        </main>
+        <hr>
+        <footer> &copy; Burger Pub 2017</footer>
+    
+        <script src="/vue/vue.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/nationPub.js"></script>
+        <script src="js/diner.js"></script>
+    </body> 
+</html>
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

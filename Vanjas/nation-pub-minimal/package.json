@@ -1,0 +1,17 @@
+{
+  "name": "nation-pub-minimal",
+  "version": "0.0.1",
+  "description": "Stub for learning the bare necessities of Node.js, socket.io and Vue",
+  "main": "app.js",  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Mikael Laaksoharju",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.7.2",
+    "vue": "^2.1.5"
+  }
+}
