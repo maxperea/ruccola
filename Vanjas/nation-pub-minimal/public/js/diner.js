@@ -19,7 +19,7 @@ new Vue({
   methods: {
     placeOrder: function() {
       // create an array of checked items to order
-    var orderItems = [].filter.call(document.getElementsByName('food[]'), function(i) {
+    var orderItems = [].filter.call(document.getElementsByName('itemlol'), function(i) {
       return i.checked;
     }).map(function(i) {
       return i.value;

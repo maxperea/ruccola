@@ -88,7 +88,9 @@ function displayItems() {
     var txtOrder = document.createTextNode(food[i].name + ": ");
     var br = document.createElement("br");
     input.setAttribute("type", "checkbox");
-    input.setAttribute("id", food[i].name)
+    input.setAttribute("id", food[i].name);
+    input.setAttribute("value", food[i].name);
+    input.setAttribute("name", "itemlol");
     order.appendChild(txtOrder);
     order.appendChild(input);
     order.appendChild(br);
