@@ -49,7 +49,6 @@
             {{menuitem.label}}, {{menuitem.size}} cl, {{menuitem.price}}:-
           </label>
           <hr>
-          <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
           </section>
 
           <aside>
@@ -70,7 +69,20 @@
       </main>
 
     </div>
+    <div id="summary">
+      <h2>BESTÄLLNING:</h2>
+      <div id="orderlist">
+          <!--Här ska "boxen" med orders vara-- >
+          <h4> Jfjfjfjfjf
+          hej<br>
+          sen då?</h4> 
+      </div>
+      
+      <h3 id="ordernr">ORDER NR:</h3> 
 
+      <h3>TABLE NR:</h3> 
+      <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+    </div>
 
     <div class="footer">
       <hr>
