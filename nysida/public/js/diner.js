@@ -7,11 +7,11 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var i = 0;
+var orderNr = 0;
 
 function getOrderNumber() {
-    i++;
-  return "#" + i;
+    orderNr++;
+  return "#" + orderNr;
 }
 
 new Vue({
