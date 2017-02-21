@@ -7,10 +7,11 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+var i = 0;
+
 function getOrderNumber() {
-  // It's probably not a good idea to generate a random order number, client-side. 
-  // A better idea would be to let the server decide.
-  return "#" + getRandomInt(1, 1000000);
+    i++;
+  return "#" + i;
 }
 
 new Vue({
