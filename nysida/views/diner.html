@@ -22,34 +22,51 @@
       <div id="content">
         <div class="ordering">
           <section>
-          <h1>{{ uiLabels.mains }}</h1>
-          <div v-for="menuitem in menu.foods">
-            <h2>
-              <label>
-                <input type="checkbox" v-model="mainDish" :value="menuitem.label" />
-                {{menuitem.label}}, {{menuitem.price}}:-
-              </label>
-            </h2>
-            <div>
-              Extra: 
-              <label v-for="detail in menuitem.details">
-                <input type="checkbox" v-model="extras" :value="menuitem.label + '::' + detail.extra" />
-                {{detail.extra}}, {{detail.price}}:-
-              </label>      
-            </div>
-          </div>
-          <h1>{{ uiLabels.sideorders }}</h1>
-          <label v-for="menuitem in menu.sideorders">
-            <input type="checkbox" name="item[]" :value="menuitem.label" />
-            {{menuitem.label}}, {{menuitem.price}}:-
-          </label>
-          <h1>{{ uiLabels.drinks }}</h1>
-          <label v-for="menuitem in menu.drinks">
-            <input type="checkbox" name="item[]" :value="menuitem.label" />
-            {{menuitem.label}}, {{menuitem.size}} cl, {{menuitem.price}}:-
-          </label>
-          <hr>
-          <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+            <table class="foodtable">
+              <tr>
+
+                <td v-for="menuitem in menu.common">
+                    <h2>
+                      <label>
+                        <input type="checkbox" v-model="mainDish" :value="menuitem.label" />
+                        {{menuitem.label}}, {{menuitem.price}}:-
+                      </label>
+                    </h2>
+                </td>
+              </tr>
+
+              <tr>
+
+                <h1>{{ uiLabels.mains }}</h1>
+                <td v-for="menuitem in menu.foods">
+                    <h2>
+                      <label>
+                        <input type="checkbox" v-model="mainDish" :value="menuitem.label" />
+                        {{menuitem.label}}, {{menuitem.price}}:-
+                      </label>
+                    </h2>
+                    <div>
+                      Extra: 
+                      <label v-for="detail in menuitem.details">
+                        <input type="checkbox" v-model="extras" :value="menuitem.label + '::' + detail.extra" />
+                        {{detail.extra}}, {{detail.price}}:-
+                      </label>      
+                    </div>
+                </td>
+              </tr>
+            </table>
+            <h1>{{ uiLabels.sideorders }}</h1>
+            <label v-for="menuitem in menu.sideorders">
+              <input type="checkbox" name="item[]" :value="menuitem.label" />
+              {{menuitem.label}}, {{menuitem.price}}:-
+            </label>
+            <h1>{{ uiLabels.drinks }}</h1>
+            <label v-for="menuitem in menu.drinks">
+              <input type="checkbox" name="item[]" :value="menuitem.label" />
+              {{menuitem.label}}, {{menuitem.size}} cl, {{menuitem.price}}:-
+            </label>
+            <hr>
+            <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
           </section>
 
           <aside>

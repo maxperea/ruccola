@@ -1,4 +1,36 @@
 {
+  "common": [
+    {
+      "order": 1,
+      "label": "Common1",
+      "price": 50,
+      "details": [
+        { "extra": "Lök",
+          "price": 0
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "label": "Common2",
+      "price": 50,
+      "details": [
+        { "extra": "Lök",
+          "price": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "label": "Common3",
+      "price": 50,
+      "details": [
+        { "extra": "Lök",
+          "price": 0
+        }
+      ]
+    }
+  ],
   "foods": [
     {
       "order": 1,
