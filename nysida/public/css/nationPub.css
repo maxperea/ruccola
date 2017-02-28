@@ -62,6 +62,12 @@ aside {
   background: #F9F9F9;
 }
 
+#orderlist{
+  border: 1px solid black;
+  background: grey;
+
+}
+
 .footer {
   height:50px;
   position: absolute;

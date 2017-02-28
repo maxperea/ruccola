@@ -90,7 +90,7 @@ function displayItems() {
     input.setAttribute("type", "checkbox");
     input.setAttribute("id", food[i].name);
     input.setAttribute("value", food[i].name);
-    input.setAttribute("name", "itemlol");
+    input.setAttribute("name", "itemfood");
     order.appendChild(txtOrder);
     order.appendChild(input);
     order.appendChild(br);
