@@ -10,7 +10,7 @@ function getRandomInt(min, max) {
 var orderNr = 0;
 
 function getOrderNumber() {
-    orderNr++;
+  orderNr++;
   return "#" + orderNr;
 }
 
