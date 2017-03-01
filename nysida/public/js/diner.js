@@ -36,7 +36,7 @@ socket.emit('order', {orderId: getOrderNumber(), orderItems: orderItems});
          }
 });
 
-var summary[];
+var summary = [];
 
 function foodSummary(key){
   for(i = 0; i < common.length ; i++){
@@ -88,13 +88,14 @@ function drinkSummary(key){
   console.log('Drink does not exist');
 }
 
+
 function printSummary()  {
 var el1 = document.getElementByID(foodlist);
 for(i = 0; i < summary.length; i++){
 var order = document.createElement('li');
 order.setAttribute('value', summary[i]); 
 el1.appendChild(order);
-
+}
 }
 
 /*
