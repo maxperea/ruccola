@@ -12,6 +12,11 @@ body {
   line-height: 1.5em;
 }
 
+button {
+    width: 200px;
+    height: 100px;
+    font-size: 34px;
+}
 
 header {
   height: 100px;
