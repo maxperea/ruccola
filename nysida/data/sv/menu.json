@@ -79,7 +79,7 @@
     }
   ],
   "drinks": [
-    {
+      {
     "order": 1,
     "label": "Fullers India Pale Ale",
     "size": 50,

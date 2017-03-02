@@ -28,7 +28,7 @@
                 <td v-for="menuitem in menu.common">
                     <h2>
                       <label>
-                        <button>{{menuitem.label}}, {{menuitem.price}}:-</button>
+                        <button :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
                       </label>
                     </h2>
                 </td>

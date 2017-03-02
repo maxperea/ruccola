@@ -39,23 +39,10 @@ socket.emit('order', {orderId: getOrderNumber(), orderItems: orderItems});
 var summary = [];
 
 function foodSummary(key){
-  for(i = 0; i < common.length ; i++){
-     if(common[i].label == key){
-        summary.push(common[i]);
+        summary.push(key);
+        console.log(summary);
         printSummary();
         return;
-    }
-
-  }
-  for(i=0 ; i < foods.length; i++){
-    if(foods[i].label == key){
-        summary.push(foods[i]);
-        printSummary();
-        return;
-    }
-
-}       
-console.log('Order does not exist');
 }
 
 
