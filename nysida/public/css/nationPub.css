@@ -66,13 +66,12 @@ aside {
 
 .foodtable {
   border-spacing: 25px;
-  margin: 0px;
   background: #F9F9F9;
 }
 
 #orderlist{
-  border: 1px solid black;
-  background: grey;
+  border-spacing: 25px;
+  background: #F9F9F9;
 
 }
 
