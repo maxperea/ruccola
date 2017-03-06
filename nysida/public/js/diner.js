@@ -29,8 +29,11 @@ new Vue({
       });
       // OK, it's not really neat to use two different ways of accomplishing the same thing
       // but let's pretend it's for an educational purpose ... here comes another no-no:
-      var orderItems = mainCourse.concat(extras).concat(theRest);
+      //var orderItems = mainCourse.concat(extras).concat(theRest);
       // Finally we make use of socket.io's magic to send the stuff to the kitchen
+      var orderItems = summary;
+      summary = [];
+      printSummary();
       socket.emit('order', {orderId: getOrderNumber(), orderItems: orderItems});
     }
   }
