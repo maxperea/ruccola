@@ -84,6 +84,7 @@ function printSummary()  {
   //var el1 = document.getElementById(foodlist);
   document.getElementById("foodlist").innerHTML = ' ';
   var i;
+  var x = 0;
   for(i = 0; i < summary.length; i++){
     //var order = document.createElement('li');
     //order.setAttribute('value', summary[i]); 
@@ -93,7 +94,14 @@ function printSummary()  {
     var textnode = document.createTextNode(summary[i]);         // Create a text node
     node.appendChild(textnode);                              // Append the text to <li>
     document.getElementById("foodlist").appendChild(node);     // Append <li> to <ul> with id="myList"
+    x = x + 50;
   }
+  var node = document.createElement("LI");                 // Create a <li> node
+  node.setAttribute('value', x); 
+  var textnode = document.createTextNode("Summa: " + x + ":-");         // Create a text node
+  node.appendChild(textnode);                              // Append the text to <li>
+  document.getElementById("foodlist").appendChild(node);     // Append <li> to <ul> with id="myList"
+
 }
 
 /*

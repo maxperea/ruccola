@@ -2,8 +2,8 @@
   "common": [
     {
       "order": 1,
-      "label": "Common1",
-      "price": 50,
+      "label": "En stor stark",
+      "price": 30,
       "amount": 1,  
       "details": [
         { "extra": "Lök",
@@ -13,7 +13,7 @@
     },
     {
       "order": 2,
-      "label": "Common2",
+      "label": "Värmlandsburgare",
       "price": 50,
       "amount": 1,
       "details": [
@@ -24,7 +24,7 @@
     },
     {
       "order": 3,
-      "label": "Common3",
+      "label": "Ett glas vin",
       "price": 50,
       "amount": 1,
       "details": [

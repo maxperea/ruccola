@@ -13,21 +13,19 @@ body {
 }
 
 button.commonbutton {
-  width: 200px;
-  height: 100px;
-  font-size: 28px;
+  height: 80px;
+  font-size: 22px;
 }
 
 button.uncommonbutton {
-  width: 160;
-  height: 70px;
+  height: 60px;
   font-size: 20px;
 }
 
 button.drinkbutton {
-  width: 80px;
-  height: 40px;
-  font-size: 12px;
+  /*width: 120px;*/
+  height: 50px;
+  font-size: 14px;
 }
 
 header {
@@ -78,7 +76,8 @@ aside {
 
 .foodtable {
   border-spacing: 25px;
-  background: #F9F9F9;
+  background: #FFFFFF;
+  padding-left: 25px;
 }
 
 #orderlist{

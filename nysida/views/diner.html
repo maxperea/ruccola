@@ -21,53 +21,30 @@
       <main>
       <div id="content">
         <div class="ordering">
-          <section>
-            <table class="foodtable">
-              <tr>
-
-                <td v-for="menuitem in menu.common">
-                    <h2>
-                      <label>
-                        <button class="commonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
-                      </label>
-                    </h2>
-                </td>
-              </tr>
-
-              <tr>
-
-                <h1>{{ uiLabels.mains }}</h1>
-                <td v-for="menuitem in menu.foods">
-                    <h2>
-                      <label>
-                        <button class="uncommonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
-                      </label>
-                    </h2>
-                </td>
-              </tr>
-            </table>
+          <section class="foodtable">
+            <h1>{{ uiLabels.common }}</h1>
+            <label v-for="menuitem in menu.common">
+              <button class="commonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
+            </label>
+            <h1>{{ uiLabels.mains }}</h1>
+            <label v-for="menuitem in menu.foods">
+              <button class="uncommonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
+            </label>
             <h1>{{ uiLabels.sideorders }}</h1>
             <label v-for="menuitem in menu.sideorders">
               <button class="uncommonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
             <h1>{{ uiLabels.drinks }}</h1>
             <label v-for="menuitem in menu.drinks">
-              <button class="uncommonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
+              <button class="drinkbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
             <hr>
             <div id="summary">
-          <div id="orderlist">
-          <h2>BESTÄLLNING:</h2>
+              <h1>Beställning:</h1>
               <!--Här ska "boxen" med orders vara-->
               <ul id="foodlist"></ul>
 
               <ul id="drinklist"></ul>
-              <hr>
-              <h3 id="ordernr">ORDER NR:</h3> 
-
-              <hr>
-              <h3>TABLE NR:</h3> 
-          </div>
             </div>
             <button class="commonbutton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
           </section>
