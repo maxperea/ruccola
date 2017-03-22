@@ -8,6 +8,10 @@ new Vue({
     markDone: function(orderid) {
       this.orders[orderid].done = true;
       socket.emit("orderDone", orderid);
+    },
+    markAccepted: function(orderid) {
+      this.orders[orderid].accepted = true;
+      socket.emit("orderAccepted", orderid);
     }
   }
 });

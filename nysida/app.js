@@ -30,6 +30,7 @@ var orders = function() {
     orders[dish.orderId] ={};
     orders[dish.orderId].orderItems = dish.orderItems;
     orders[dish.orderId].done = false;
+    orders[dish.orderId].accepted = false;
   };
 
   var getAll = function() {
@@ -40,11 +41,16 @@ var orders = function() {
     orders[orderId].done = true;
   };
 
+  var markAccepted = function(orderId) {
+    orders[orderId].accepted = true;
+  };
+
   //expose functions
   return {
     addOrder : addOrder,
     getAll : getAll,
-    markDone : markDone
+    markDone : markDone,
+    markAccepted : markAccepted
   };
 }(); // instantiate the class immediately
 
@@ -75,6 +81,11 @@ io.on('connection', function(socket) {
 
   socket.on('orderDone', function(orderId) {
     orders.markDone(orderId);
+    io.emit('currentQueue', orders.getAll());
+  });
+
+  socket.on('orderAccepted', function(orderId) {
+    orders.markAccepted(orderId);
     io.emit('currentQueue', orders.getAll());
   });
 });

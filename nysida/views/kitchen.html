@@ -22,9 +22,9 @@
         <section>
           <h1>{{ uiLabels.ordersInQueue }}</h1>
           <ol>
-            <li v-for="(item, key) in orders" v-if="!item.done"> 
+            <li v-for="(item, key) in orders" v-if="!item.accepted"> 
               {{ key }} : {{ item.orderItems.join(', ') }} 
-              <button v-on:click="markDone(key)">
+              <button v-on:click="markAccepted(key)">
                 Acceptera
               </button>
             </li>
@@ -35,8 +35,11 @@
         <div id="accepted" class="ordering">
           <h1>Accepterade ordrar</h1>
           <ol>
-              <li v-for="(item, key) in orders" v-if="item.done"> 
+              <li v-for="(item, key) in orders" v-if="item.accepted && !item.done"> 
                 {{ key }} : {{ item.orderItems.join(', ') }}
+              <button v-on:click="markDone(key)">
+                Klar
+              </button>
               </li>
             </ol>
 
@@ -47,6 +50,9 @@
         <aside>
           <div class="ordering">
             <h1>Färdiga ordrar</h1>
+              <li v-for="(item, key) in orders" v-if="item.done"> 
+                {{ key }} : {{ item.orderItems.join(', ') }}
+              </li>
           </div>
         </aside>
       </div>
