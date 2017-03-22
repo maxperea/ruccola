@@ -21,32 +21,37 @@
       <div id="content">
         <div class="ordering">
           <section class="foodtable">
+            <div id="commonfood">
             <h1>{{ uiLabels.common }}</h1>
             <label v-for="menuitem in menu.common">
               <button class="commonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
+            </div>
+            <hr>
+
             <h1>{{ uiLabels.mains }}</h1>
             <label v-for="menuitem in menu.foods">
               <button class="uncommonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
+            <hr>
             <h1>{{ uiLabels.sideorders }}</h1>
             <label v-for="menuitem in menu.sideorders">
-              <button class="uncommonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
+              <button class="uncommonbutton2" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
+            <hr>
             <h1>{{ uiLabels.drinks }}</h1>
             <label v-for="menuitem in menu.drinks">
               <button class="drinkbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
-            <hr>
+          </section>
             <div id="summary">
               <h1>Beställning:</h1>
               <!--Här ska "boxen" med orders vara-->
               <ul id="foodlist"></ul>
 
               <ul id="drinklist"></ul>
+            <button class="orderbutton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
             </div>
-            <button class="commonbutton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
-          </section>
 
           <aside>
             <div class="ordering">
