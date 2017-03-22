@@ -31,8 +31,11 @@ new Vue({
       // but let's pretend it's for an educational purpose ... here comes another no-no:
       //var orderItems = mainCourse.concat(extras).concat(theRest);
       // Finally we make use of socket.io's magic to send the stuff to the kitchen
+      var note = document.getElementById("form1").elements[0].value;
+      summary.push(note);
       var orderItems = summary;
       summary = [];
+      document.getElementById("form1").reset();
       printSummary();
       socket.emit('order', {orderId: getOrderNumber(), orderItems: orderItems});
     }

@@ -50,26 +50,31 @@
               <ul id="foodlist"></ul>
 
               <ul id="drinklist"></ul>
-            <button class="orderbutton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+
+              <form id="form1" action="/action_page.php">
+                Notes: <input type="text" name="fname"><br>
+              </form>
+
+              <button class="orderbutton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
             </div>
 
-          <aside>
-            <div class="ordering">
-              <h1>Köket</h1>
-              <h2>Väntande beställningar</h2>
-              <ol>
-                <li v-for="(item, key) in orders" v-if="!item.accepted"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
-              </ol>
-              <h2>Accepterade beställningar</h2>
-              <ol>
-                <li v-for="(item, key) in orders" v-if="item.accepted && !item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
-              </ol>
-              <h2>Färdiga beställningar</h2>
-              <ol>
-                <li v-for="(item, key) in orders" v-if="item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
-              </ol>
-            </div>
-          </aside>
+            <aside>
+              <div class="ordering">
+                <h1>Köket</h1>
+                <h2>Väntande beställningar</h2>
+                <ol>
+                  <li v-for="(item, key) in orders" v-if="!item.accepted"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
+                </ol>
+                <h2>Accepterade beställningar</h2>
+                <ol>
+                  <li v-for="(item, key) in orders" v-if="item.accepted && !item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
+                </ol>
+                <h2>Färdiga beställningar</h2>
+                <ol>
+                  <li v-for="(item, key) in orders" v-if="item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
+                </ol>
+              </div>
+            </aside>
         </div>
       </div>
       </main>
