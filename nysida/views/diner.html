@@ -24,24 +24,24 @@
             <div id="commonfood">
             <h1>{{ uiLabels.common }}</h1>
             <label v-for="menuitem in menu.common">
-              <button class="commonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
+              <button class="commonbutton" :value="menuitem.label +  '|' + menuitem.price" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
             </div>
             <hr>
 
             <h1>{{ uiLabels.mains }}</h1>
             <label v-for="menuitem in menu.foods">
-              <button class="uncommonbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
+              <button class="uncommonbutton" :value="menuitem.label + '|' + menuitem.price" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
             <hr>
             <h1>{{ uiLabels.sideorders }}</h1>
             <label v-for="menuitem in menu.sideorders">
-              <button class="uncommonbutton2" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
+              <button class="uncommonbutton2" :value="menuitem.label + '|' + menuitem.price" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
             <hr>
             <h1>{{ uiLabels.drinks }}</h1>
             <label v-for="menuitem in menu.drinks">
-              <button class="drinkbutton" :value="menuitem.label" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
+              <button class="drinkbutton" :value="menuitem.label + '|' + menuitem.price" onclick="foodSummary(value)">{{menuitem.label}}, {{menuitem.price}}:-</button>
             </label>
           </section>
             <div id="summary">
@@ -49,10 +49,9 @@
               <!--Här ska "boxen" med orders vara-->
               <ul id="foodlist"></ul>
 
-              <ul id="drinklist"></ul>
-
               <form id="form1" action="/action_page.php">
-                Notes: <input type="text" name="fname"><br>
+              <!--Extra: <input type="text" name="fname"><br>--!>
+                Extra: <textarea></textarea>
               </form>
 
               <button class="orderbutton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>

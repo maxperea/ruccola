@@ -35,17 +35,22 @@ new Vue({
       summary.push(note);
       var orderItems = summary;
       summary = [];
+      totalprice = 0;
       document.getElementById("form1").reset();
-      printSummary();
+      //printSummary();
+      document.getElementById("foodlist").innerHTML = ' ';
       socket.emit('order', {orderId: getOrderNumber(), orderItems: orderItems});
     }
   }
 });
 
 var summary = [];
+var totalprice = 0;
 
 function foodSummary(key){
-  summary.push(key);
+  var label = key.split("|")[0];
+  totalprice += parseInt(key.split("|")[1]);
+  summary.push(label);
   console.log(summary);
   printSummary();
   return;
@@ -87,7 +92,6 @@ function printSummary()  {
   //var el1 = document.getElementById(foodlist);
   document.getElementById("foodlist").innerHTML = ' ';
   var i;
-  var x = 0;
   for(i = 0; i < summary.length; i++){
     //var order = document.createElement('li');
     //order.setAttribute('value', summary[i]); 
@@ -97,13 +101,12 @@ function printSummary()  {
     var textnode = document.createTextNode(summary[i]);         // Create a text node
     node.appendChild(textnode);                              // Append the text to <li>
     document.getElementById("foodlist").appendChild(node);     // Append <li> to <ul> with id="myList"
-    x = x + 50;
   }
-  var node = document.createElement("LI");                 // Create a <li> node
-  node.setAttribute('value', x); 
-  var textnode = document.createTextNode("Summa: " + x + ":-");         // Create a text node
-  node.appendChild(textnode);                              // Append the text to <li>
-  document.getElementById("foodlist").appendChild(node);     // Append <li> to <ul> with id="myList"
+  //var node = document.createElement("p");                 // Create a <li> node
+  //node.setAttribute('value', totalprice); 
+  var textnode = document.createTextNode("Summa: " + totalprice + ":-");         // Create a text node
+  //node.appendChild(textnode);                              // Append the text to <li>
+  document.getElementById("foodlist").appendChild(textnode);     // Append <li> to <ul> with id="myList"
 
 }
 

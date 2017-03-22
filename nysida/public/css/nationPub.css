@@ -153,3 +153,9 @@ aside {
   text-align: center;
   font-size:10pt;
 }
+
+textarea  {
+  resize: none;
+  width: 100%;
+  height: 70px;
+}
