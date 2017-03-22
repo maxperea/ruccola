@@ -56,11 +56,15 @@
           <aside>
             <div class="ordering">
               <h1>Köket</h1>
-              <h2>{{ uiLabels.ordersInProgress }}</h2>
+              <h2>Väntande beställningar</h2>
               <ol>
-                <li v-for="(item, key) in orders" v-if="!item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
+                <li v-for="(item, key) in orders" v-if="!item.accepted"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
               </ol>
-              <h2>{{ uiLabels.ordersFinished }}</h2>
+              <h2>Accepterade beställningar</h2>
+              <ol>
+                <li v-for="(item, key) in orders" v-if="item.accepted && !item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
+              </ol>
+              <h2>Färdiga beställningar</h2>
               <ol>
                 <li v-for="(item, key) in orders" v-if="item.done"> {{ key }} : {{ item.orderItems.join(', ') }}</li>
               </ol>

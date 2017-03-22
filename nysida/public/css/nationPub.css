@@ -83,6 +83,9 @@ section {
   border-top-width: 0px;
   border-left-width: 0px;
 }
+section.kitchen {
+  width: 40%;
+}
 
 aside {
   /*padding-bottom: 10010px;
@@ -98,6 +101,13 @@ aside {
   border-right-width: 0px;
 }
 
+#accepted{
+  padding: 15px;
+  float:left;
+  width:30%;
+  height: 100%;
+}
+
 #summary{
   padding: 15px;
   float:left;
@@ -106,13 +116,6 @@ aside {
 
 }
 
-#accepted{
-  padding: 15px;
-  float:left;
-  width:20%;
-  height: 100%;
-
-}
 
 #wrapper {
   overflow: hidden;

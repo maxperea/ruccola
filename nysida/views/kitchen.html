@@ -19,12 +19,12 @@
     <main>
     <div id="orders">
       <div class="ordering">
-        <section>
-          <h1>{{ uiLabels.ordersInQueue }}</h1>
+        <section class="kitchen">
+          <h1>Beställningar att förbereda</h1>
           <ol>
             <li v-for="(item, key) in orders" v-if="!item.accepted"> 
               {{ key }} : {{ item.orderItems.join(', ') }} 
-              <button v-on:click="markAccepted(key)">
+              <button class="orderbutton" v-on:click="markAccepted(key)">
                 Acceptera
               </button>
             </li>
@@ -33,11 +33,11 @@
         </section>
 
         <div id="accepted" class="ordering">
-          <h1>Accepterade ordrar</h1>
+          <h1>Accepterade beställningar</h1>
           <ol>
               <li v-for="(item, key) in orders" v-if="item.accepted && !item.done"> 
                 {{ key }} : {{ item.orderItems.join(', ') }}
-              <button v-on:click="markDone(key)">
+              <button class="orderbutton" v-on:click="markDone(key)">
                 Klar
               </button>
               </li>
@@ -49,7 +49,7 @@
 
         <aside>
           <div class="ordering">
-            <h1>Färdiga ordrar</h1>
+            <h1>Färdiga beställningar</h1>
               <li v-for="(item, key) in orders" v-if="item.done"> 
                 {{ key }} : {{ item.orderItems.join(', ') }}
               </li>
