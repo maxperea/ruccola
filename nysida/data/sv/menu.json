@@ -79,12 +79,6 @@
     }
   ],
   "drinks": [
-      {
-    "order": 1,
-    "label": "Fullers India Pale Ale",
-    "size": 50,
-    "price": 65
-  },
   {
     "order": 2,
     "label": "Fullers ESB",
@@ -125,24 +119,6 @@
     "order": 8,
     "label": "Adnams Bitter",
     "size": 50,
-    "price": 65
-  },
-  {
-    "order": 9,
-    "label": "Innis & Gunn Orginal",
-    "size": 33,
-    "price": 65
-  },
-  {
-    "order": 10,
-    "label": "Innis & Gunn Toasted Oak IPA",
-    "size": 33,
-    "price": 65
-  },
-  {
-    "order": 11,
-    "label": "Liberty Ale",
-    "size": 33,
     "price": 65
   },
   {
