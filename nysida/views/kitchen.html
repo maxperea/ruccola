@@ -25,26 +25,28 @@
             <li v-for="(item, key) in orders" v-if="!item.done"> 
               {{ key }} : {{ item.orderItems.join(', ') }} 
               <button v-on:click="markDone(key)">
-                {{uiLabels.ready}}
+                Acceptera
               </button>
             </li>
           </ol>
 
         </section>
 
-        <div id="summary">
+        <div id="accepted" class="ordering">
           <h1>Accepterade ordrar</h1>
-          <!--Här ska "boxen" med orders vara-->
-        </div>
-
-        <aside>
-          <div class="ordering">
-            <h1>{{ uiLabels.ordersFinished }}</h1>
-            <ol>
+          <ol>
               <li v-for="(item, key) in orders" v-if="item.done"> 
                 {{ key }} : {{ item.orderItems.join(', ') }}
               </li>
             </ol>
+
+            
+       
+       </div>
+
+        <aside>
+          <div class="ordering">
+            <h1>Färdiga ordrar</h1>
           </div>
         </aside>
       </div>
